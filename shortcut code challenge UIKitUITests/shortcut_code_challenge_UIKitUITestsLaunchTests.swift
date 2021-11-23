@@ -1,32 +1,32 @@
+////
+////  shortcut_code_challenge_UIKitUITestsLaunchTests.swift
+////  shortcut code challenge UIKitUITests
+////
+////  Created by Mohsen on 11/23/21.
+////
 //
-//  shortcut_code_challenge_UIKitUITestsLaunchTests.swift
-//  shortcut code challenge UIKitUITests
+//import XCTest
 //
-//  Created by Mohsen on 11/23/21.
+//class shortcut_code_challenge_UIKitUITestsLaunchTests: XCTestCase {
 //
-
-import XCTest
-
-class shortcut_code_challenge_UIKitUITestsLaunchTests: XCTestCase {
-
-    override class var runsForEachTargetApplicationUIConfiguration: Bool {
-        true
-    }
-
-    override func setUpWithError() throws {
-        continueAfterFailure = false
-    }
-
-    func testLaunch() throws {
-        let app = XCUIApplication()
-        app.launch()
-
-        // Insert steps here to perform after app launch but before taking a screenshot,
-        // such as logging into a test account or navigating somewhere in the app
-
-        let attachment = XCTAttachment(screenshot: app.screenshot())
-        attachment.name = "Launch Screen"
-        attachment.lifetime = .keepAlways
-        add(attachment)
-    }
-}
+//    override class var runsForEachTargetApplicationUIConfiguration: Bool {
+//        true
+//    }
+//
+//    override func setUpWithError() throws {
+//        continueAfterFailure = false
+//    }
+//
+//    func testLaunch() throws {
+//        let app = XCUIApplication()
+//        app.launch()
+//
+//        // Insert steps here to perform after app launch but before taking a screenshot,
+//        // such as logging into a test account or navigating somewhere in the app
+//
+//        let attachment = XCTAttachment(screenshot: app.screenshot())
+//        attachment.name = "Launch Screen"
+//        attachment.lifetime = .keepAlways
+//        add(attachment)
+//    }
+//}
