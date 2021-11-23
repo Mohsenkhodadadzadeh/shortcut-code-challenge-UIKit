@@ -46,6 +46,7 @@ class DetailVC: UIViewController {
         didSet {
             if comicImage != nil {
                 comicImageView.image = comicImage
+                isImageLoaded = true
             }
         }
     }

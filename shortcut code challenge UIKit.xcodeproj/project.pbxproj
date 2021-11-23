@@ -39,6 +39,8 @@
 		82EFCD67274D3B88009EA973 /* NotificationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD66274D3B88009EA973 /* NotificationPermission.swift */; };
 		82EFCD6A274D4360009EA973 /* publicNamesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD69274D4360009EA973 /* publicNamesEnum.swift */; };
 		82EFCD6D274D442F009EA973 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD6C274D442F009EA973 /* DetailVC.swift */; };
+		82EFCD70274D527A009EA973 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD6F274D527A009EA973 /* FavoriteVC.swift */; };
+		82EFCD72274D5297009EA973 /* FavoriteTVHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD71274D5297009EA973 /* FavoriteTVHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		82EFCD66274D3B88009EA973 /* NotificationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermission.swift; sourceTree = "<group>"; };
 		82EFCD69274D4360009EA973 /* publicNamesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicNamesEnum.swift; sourceTree = "<group>"; };
 		82EFCD6C274D442F009EA973 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		82EFCD6F274D527A009EA973 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
+		82EFCD71274D5297009EA973 /* FavoriteTVHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTVHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +228,7 @@
 		82EFCD58274D38F0009EA973 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				82EFCD6E274D5268009EA973 /* Favorite Controller */,
 				82EFCD6B274D441D009EA973 /* Detail Controller */,
 				82EFCD59274D3A69009EA973 /* Browse */,
 			);
@@ -258,6 +263,15 @@
 				82EFCD6C274D442F009EA973 /* DetailVC.swift */,
 			);
 			path = "Detail Controller";
+			sourceTree = "<group>";
+		};
+		82EFCD6E274D5268009EA973 /* Favorite Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82EFCD6F274D527A009EA973 /* FavoriteVC.swift */,
+				82EFCD71274D5297009EA973 /* FavoriteTVHandler.swift */,
+			);
+			path = "Favorite Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +410,7 @@
 				826F5E6A274D14F600C85EE0 /* ComicEntity+CoreDataProperties.swift in Sources */,
 				826F5E1D274CD74100C85EE0 /* ViewController.swift in Sources */,
 				826F5E50274CE97100C85EE0 /* Date.swift in Sources */,
+				82EFCD70274D527A009EA973 /* FavoriteVC.swift in Sources */,
 				826F5E57274D068B00C85EE0 /* Network.swift in Sources */,
 				82EFCD63274D3B53009EA973 /* SearchSRUHandler.swift in Sources */,
 				826F5E19274CD74100C85EE0 /* AppDelegate.swift in Sources */,
@@ -403,6 +418,7 @@
 				82EFCD67274D3B88009EA973 /* NotificationPermission.swift in Sources */,
 				826F5E5B274D073100C85EE0 /* Services.swift in Sources */,
 				826F5E1B274CD74100C85EE0 /* SceneDelegate.swift in Sources */,
+				82EFCD72274D5297009EA973 /* FavoriteTVHandler.swift in Sources */,
 				826F5E4D274CE90B00C85EE0 /* ComicModel.swift in Sources */,
 				82EFCD5D274D3AF3009EA973 /* BrowseTVC.swift in Sources */,
 				826F5E5F274D0A7600C85EE0 /* Int.swift in Sources */,

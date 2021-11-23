@@ -48,7 +48,7 @@ class shortcut_code_challenge_UIKitUITests: XCTestCase {
         
         expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: occamCell, handler: nil)
         
-        waitForExpectations(timeout: 8, handler: nil)
+        waitForExpectations(timeout: 40, handler: nil)
         
         occamCell.tap()
         
@@ -56,7 +56,7 @@ class shortcut_code_challenge_UIKitUITests: XCTestCase {
         let smallImage = element.children(matching: .image).element(boundBy: 0)
         expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: smallImage, handler: nil)
         
-        waitForExpectations(timeout: 8, handler: nil)
+        waitForExpectations(timeout: 40, handler: nil)
         
         smallImage.tap()
         
@@ -69,6 +69,9 @@ class shortcut_code_challenge_UIKitUITests: XCTestCase {
         XCTAssertTrue(fullScreenImage.exists)
         
     }
+    
+    
+    
     
     func testExample() throws {
         // UI tests must launch the application that they test.
