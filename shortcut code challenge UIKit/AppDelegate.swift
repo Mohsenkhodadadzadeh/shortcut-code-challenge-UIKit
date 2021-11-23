@@ -7,17 +7,76 @@
 
 import UIKit
 import CoreData
+import UserNotifications
+import BackgroundTasks
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    static let userNotificationCenter = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if #available(iOS 13, *) {
+            BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.mohsenkh.shortcut-code-challenge-UIKit.fetch", using: nil) { task in
+                //Logger.shared.info("[BGTASK] Perform bg fetch bgtask")
+                let defaults = UserDefaults.standard
+                let lastComicId = defaults.integer(forKey: publicNamesEnum.lastComicId.rawValue)
+                Network.shared.getData(url: Services.urlGenerator()) { (obj: ComicModel) in
+                    if obj.num > lastComicId {
+                        
+                        
+                        let notificationContent = UNMutableNotificationContent()
+                        notificationContent.title = "New Comic".uppercased()
+                        notificationContent.body = "new comic is published for you"
+                        notificationContent.badge = NSNumber(value: 3)
+                        
+                        
+                        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5,
+                                                                        repeats: false)
+                        let request = UNNotificationRequest(identifier: "newComic",
+                                                            content: notificationContent,
+                                                            trigger: trigger)
+                        
+                        AppDelegate.userNotificationCenter.add(request) { (error) in
+                            if let error = error {
+                                print("Notification Error: ", error)
+                            }
+                        }
+                    }
+                } failure: { _ in
+                    
+                }
+                
+                task.setTaskCompleted(success: true)
+                self.scheduleAppRefresh()
+            }
+            
+        }
+        
         return true
     }
 
+    @available(iOS 13.0, *)
+    func scheduleAppRefresh() {
+        let request = BGAppRefreshTaskRequest(identifier: "com.mohsenkh.shortcut-code-challenge-UIKit.fetch")
+        
+        request.earliestBeginDate = Date(timeIntervalSinceNow: 5 * 60) // Refresh after 5 minutes.
+        
+        do {
+            try BGTaskScheduler.shared.submit(request)
+        } catch {
+            print("Could not schedule app refresh task \(error.localizedDescription)")
+        }
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        if #available(iOS 13, *) {
+            self.scheduleAppRefresh()
+        }
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
