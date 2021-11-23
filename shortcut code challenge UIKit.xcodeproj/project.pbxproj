@@ -30,6 +30,13 @@
 		826F5E69274D14F600C85EE0 /* ComicEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E67274D14F600C85EE0 /* ComicEntity+CoreDataClass.swift */; };
 		826F5E6A274D14F600C85EE0 /* ComicEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E68274D14F600C85EE0 /* ComicEntity+CoreDataProperties.swift */; };
 		826F5E6C274D1C0C00C85EE0 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E6B274D1C0C00C85EE0 /* DataStorage.swift */; };
+		82EFCD5B274D3A85009EA973 /* BrowseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD5A274D3A85009EA973 /* BrowseVC.swift */; };
+		82EFCD5D274D3AF3009EA973 /* BrowseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD5C274D3AF3009EA973 /* BrowseTVC.swift */; };
+		82EFCD5F274D3B16009EA973 /* BrowseTVHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD5E274D3B16009EA973 /* BrowseTVHandler.swift */; };
+		82EFCD61274D3B34009EA973 /* WaitingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD60274D3B34009EA973 /* WaitingTVC.swift */; };
+		82EFCD63274D3B53009EA973 /* SearchSRUHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD62274D3B53009EA973 /* SearchSRUHandler.swift */; };
+		82EFCD65274D3B6D009EA973 /* SearchSBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD64274D3B6D009EA973 /* SearchSBHandler.swift */; };
+		82EFCD67274D3B88009EA973 /* NotificationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD66274D3B88009EA973 /* NotificationPermission.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +84,13 @@
 		826F5E67274D14F600C85EE0 /* ComicEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		826F5E68274D14F600C85EE0 /* ComicEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		826F5E6B274D1C0C00C85EE0 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		82EFCD5A274D3A85009EA973 /* BrowseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseVC.swift; sourceTree = "<group>"; };
+		82EFCD5C274D3AF3009EA973 /* BrowseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseTVC.swift; sourceTree = "<group>"; };
+		82EFCD5E274D3B16009EA973 /* BrowseTVHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseTVHandler.swift; sourceTree = "<group>"; };
+		82EFCD60274D3B34009EA973 /* WaitingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingTVC.swift; sourceTree = "<group>"; };
+		82EFCD62274D3B53009EA973 /* SearchSRUHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSRUHandler.swift; sourceTree = "<group>"; };
+		82EFCD64274D3B6D009EA973 /* SearchSBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSBHandler.swift; sourceTree = "<group>"; };
+		82EFCD66274D3B88009EA973 /* NotificationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermission.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +141,7 @@
 		826F5E17274CD74100C85EE0 /* shortcut code challenge UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				82EFCD58274D38F0009EA973 /* ViewController */,
 				826F5E55274D067400C85EE0 /* Services */,
 				826F5E4E274CE95100C85EE0 /* Extension */,
 				826F5E4B274CE8D600C85EE0 /* Model */,
@@ -199,6 +214,28 @@
 				826F5E68274D14F600C85EE0 /* ComicEntity+CoreDataProperties.swift */,
 			);
 			path = "Core Data model";
+			sourceTree = "<group>";
+		};
+		82EFCD58274D38F0009EA973 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82EFCD59274D3A69009EA973 /* Browse */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		82EFCD59274D3A69009EA973 /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				82EFCD5A274D3A85009EA973 /* BrowseVC.swift */,
+				82EFCD5C274D3AF3009EA973 /* BrowseTVC.swift */,
+				82EFCD5E274D3B16009EA973 /* BrowseTVHandler.swift */,
+				82EFCD60274D3B34009EA973 /* WaitingTVC.swift */,
+				82EFCD62274D3B53009EA973 /* SearchSRUHandler.swift */,
+				82EFCD64274D3B6D009EA973 /* SearchSBHandler.swift */,
+				82EFCD66274D3B88009EA973 /* NotificationPermission.swift */,
+			);
+			path = Browse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,20 +370,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82EFCD5F274D3B16009EA973 /* BrowseTVHandler.swift in Sources */,
 				826F5E6A274D14F600C85EE0 /* ComicEntity+CoreDataProperties.swift in Sources */,
 				826F5E1D274CD74100C85EE0 /* ViewController.swift in Sources */,
 				826F5E50274CE97100C85EE0 /* Date.swift in Sources */,
 				826F5E57274D068B00C85EE0 /* Network.swift in Sources */,
+				82EFCD63274D3B53009EA973 /* SearchSRUHandler.swift in Sources */,
 				826F5E19274CD74100C85EE0 /* AppDelegate.swift in Sources */,
 				826F5E6C274D1C0C00C85EE0 /* DataStorage.swift in Sources */,
+				82EFCD67274D3B88009EA973 /* NotificationPermission.swift in Sources */,
 				826F5E5B274D073100C85EE0 /* Services.swift in Sources */,
 				826F5E1B274CD74100C85EE0 /* SceneDelegate.swift in Sources */,
 				826F5E4D274CE90B00C85EE0 /* ComicModel.swift in Sources */,
+				82EFCD5D274D3AF3009EA973 /* BrowseTVC.swift in Sources */,
 				826F5E5F274D0A7600C85EE0 /* Int.swift in Sources */,
 				826F5E5D274D09D500C85EE0 /* NetworkErrors.swift in Sources */,
 				826F5E52274CEAD700C85EE0 /* Collection.swift in Sources */,
 				826F5E69274D14F600C85EE0 /* ComicEntity+CoreDataClass.swift in Sources */,
+				82EFCD5B274D3A85009EA973 /* BrowseVC.swift in Sources */,
+				82EFCD65274D3B6D009EA973 /* SearchSBHandler.swift in Sources */,
 				826F5E23274CD74100C85EE0 /* shortcut_code_challenge_UIKit.xcdatamodeld in Sources */,
+				82EFCD61274D3B34009EA973 /* WaitingTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +578,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -562,6 +607,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
