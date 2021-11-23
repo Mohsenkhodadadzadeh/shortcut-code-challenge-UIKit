@@ -37,6 +37,7 @@
 		82EFCD63274D3B53009EA973 /* SearchSRUHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD62274D3B53009EA973 /* SearchSRUHandler.swift */; };
 		82EFCD65274D3B6D009EA973 /* SearchSBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD64274D3B6D009EA973 /* SearchSBHandler.swift */; };
 		82EFCD67274D3B88009EA973 /* NotificationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD66274D3B88009EA973 /* NotificationPermission.swift */; };
+		82EFCD6A274D4360009EA973 /* publicNamesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD69274D4360009EA973 /* publicNamesEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		82EFCD62274D3B53009EA973 /* SearchSRUHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSRUHandler.swift; sourceTree = "<group>"; };
 		82EFCD64274D3B6D009EA973 /* SearchSBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSBHandler.swift; sourceTree = "<group>"; };
 		82EFCD66274D3B88009EA973 /* NotificationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermission.swift; sourceTree = "<group>"; };
+		82EFCD69274D4360009EA973 /* publicNamesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicNamesEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		826F5E17274CD74100C85EE0 /* shortcut code challenge UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				82EFCD68274D4354009EA973 /* Enum */,
 				82EFCD58274D38F0009EA973 /* ViewController */,
 				826F5E55274D067400C85EE0 /* Services */,
 				826F5E4E274CE95100C85EE0 /* Extension */,
@@ -236,6 +239,14 @@
 				82EFCD66274D3B88009EA973 /* NotificationPermission.swift */,
 			);
 			path = Browse;
+			sourceTree = "<group>";
+		};
+		82EFCD68274D4354009EA973 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				82EFCD69274D4360009EA973 /* publicNamesEnum.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +401,7 @@
 				82EFCD5B274D3A85009EA973 /* BrowseVC.swift in Sources */,
 				82EFCD65274D3B6D009EA973 /* SearchSBHandler.swift in Sources */,
 				826F5E23274CD74100C85EE0 /* shortcut_code_challenge_UIKit.xcdatamodeld in Sources */,
+				82EFCD6A274D4360009EA973 /* publicNamesEnum.swift in Sources */,
 				82EFCD61274D3B34009EA973 /* WaitingTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
