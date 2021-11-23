@@ -65,9 +65,9 @@ class BrowseVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "DetailSegue" {
-//            if let destNav = segue.destination as? DetailVC {
-//                destNav.comicData = selectedComic
-//            }
+            if let destNav = segue.destination as? DetailVC {
+                destNav.comicData = selectedComic
+            }
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.

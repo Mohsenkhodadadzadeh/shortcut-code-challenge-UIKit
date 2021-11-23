@@ -69,6 +69,18 @@ public final class DataStorage {
         
     }
     
+    func retriveComicImage(for id: Int) -> UIImage? {
+        
+        let fetch = prepareFetchRequestForComicEntity(query: "num == \(id)")
+        if let object = (try? managedContext.fetch(fetch))?.first {
+                if let imageData = object.imageData {
+                    return UIImage(data: imageData)
+                }
+           
+        }
+        return nil
+    }
+    
     
     private func prepareFetchRequestForComicEntity(query: String) -> NSFetchRequest<ComicEntity> {
         let fetch = NSFetchRequest<ComicEntity>(entityName: "ComicEntity")

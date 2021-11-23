@@ -43,6 +43,33 @@ class shortcut_code_challenge_UIKitUITests: XCTestCase {
                                                         
     }
     
+    func testDetailViewLoadImageAndFullScreen() throws {
+        let occamCell = XCUIApplication().tables.staticTexts["Occam"]
+        
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: occamCell, handler: nil)
+        
+        waitForExpectations(timeout: 8, handler: nil)
+        
+        occamCell.tap()
+        
+        let element = XCUIApplication().windows.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+        let smallImage = element.children(matching: .image).element(boundBy: 0)
+        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: smallImage, handler: nil)
+        
+        waitForExpectations(timeout: 8, handler: nil)
+        
+        smallImage.tap()
+        
+        XCTAssertTrue(smallImage.exists)
+        
+        let fullScreenImage = element.children(matching: .image).element(boundBy: 1)
+        
+        fullScreenImage.tap()
+        
+        XCTAssertTrue(fullScreenImage.exists)
+        
+    }
+    
     func testExample() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
