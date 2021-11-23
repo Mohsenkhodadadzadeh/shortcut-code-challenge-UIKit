@@ -34,6 +34,17 @@ class ServicesTest: XCTestCase {
         XCTAssertEqual(localUrl, generatedUrl)
     }
     
+    func testSaveComicOnCoreData() throws {
+        let localData = ComicModel(num: 11, description: "comicDescription" , publishedDate:  Date(), link: "Comic Link", image: nil, news: "Comic News", safeTitle: "safe title", title: "title", transcript: "Transcript")
+        var dataStorage = DataStorage()
+        dataStorage.saveComic(localData, image: nil)
+        
+        let recordedData = dataStorage.retriveComics().filter({$0.num == 11}).first
+        
+        XCTAssertEqual(localData, recordedData!)
+        
+    }
+    
     
     func testExample() throws {
         // This is an example of a functional test case.
