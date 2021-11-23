@@ -27,6 +27,9 @@
 		826F5E5D274D09D500C85EE0 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E5C274D09D500C85EE0 /* NetworkErrors.swift */; };
 		826F5E5F274D0A7600C85EE0 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E5E274D0A7600C85EE0 /* Int.swift */; };
 		826F5E61274D0F4B00C85EE0 /* ServicesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E60274D0F4B00C85EE0 /* ServicesTest.swift */; };
+		826F5E69274D14F600C85EE0 /* ComicEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E67274D14F600C85EE0 /* ComicEntity+CoreDataClass.swift */; };
+		826F5E6A274D14F600C85EE0 /* ComicEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E68274D14F600C85EE0 /* ComicEntity+CoreDataProperties.swift */; };
+		826F5E6C274D1C0C00C85EE0 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E6B274D1C0C00C85EE0 /* DataStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		826F5E5C274D09D500C85EE0 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		826F5E5E274D0A7600C85EE0 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		826F5E60274D0F4B00C85EE0 /* ServicesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTest.swift; sourceTree = "<group>"; };
+		826F5E67274D14F600C85EE0 /* ComicEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		826F5E68274D14F600C85EE0 /* ComicEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		826F5E6B274D1C0C00C85EE0 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,7 @@
 		826F5E4B274CE8D600C85EE0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				826F5E62274D149000C85EE0 /* Core Data model */,
 				826F5E4C274CE90B00C85EE0 /* ComicModel.swift */,
 			);
 			path = Model;
@@ -180,8 +187,18 @@
 				826F5E58274D06C200C85EE0 /* ServerEnvironments.plist */,
 				826F5E5A274D073100C85EE0 /* Services.swift */,
 				826F5E5C274D09D500C85EE0 /* NetworkErrors.swift */,
+				826F5E6B274D1C0C00C85EE0 /* DataStorage.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		826F5E62274D149000C85EE0 /* Core Data model */ = {
+			isa = PBXGroup;
+			children = (
+				826F5E67274D14F600C85EE0 /* ComicEntity+CoreDataClass.swift */,
+				826F5E68274D14F600C85EE0 /* ComicEntity+CoreDataProperties.swift */,
+			);
+			path = "Core Data model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,16 +333,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				826F5E6A274D14F600C85EE0 /* ComicEntity+CoreDataProperties.swift in Sources */,
 				826F5E1D274CD74100C85EE0 /* ViewController.swift in Sources */,
 				826F5E50274CE97100C85EE0 /* Date.swift in Sources */,
 				826F5E57274D068B00C85EE0 /* Network.swift in Sources */,
 				826F5E19274CD74100C85EE0 /* AppDelegate.swift in Sources */,
+				826F5E6C274D1C0C00C85EE0 /* DataStorage.swift in Sources */,
 				826F5E5B274D073100C85EE0 /* Services.swift in Sources */,
 				826F5E1B274CD74100C85EE0 /* SceneDelegate.swift in Sources */,
 				826F5E4D274CE90B00C85EE0 /* ComicModel.swift in Sources */,
 				826F5E5F274D0A7600C85EE0 /* Int.swift in Sources */,
 				826F5E5D274D09D500C85EE0 /* NetworkErrors.swift in Sources */,
 				826F5E52274CEAD700C85EE0 /* Collection.swift in Sources */,
+				826F5E69274D14F600C85EE0 /* ComicEntity+CoreDataClass.swift in Sources */,
 				826F5E23274CD74100C85EE0 /* shortcut_code_challenge_UIKit.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

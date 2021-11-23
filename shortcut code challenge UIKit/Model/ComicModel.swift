@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct ComicModel: Codable {
+struct ComicModel: Codable, Equatable {
     
     var num: Int
     
