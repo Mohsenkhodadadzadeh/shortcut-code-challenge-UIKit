@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public final class Services {
     
@@ -37,6 +38,25 @@ public final class Services {
             let urlString = Services.generalUrl.replacingOccurrences(of: "{0}/", with: "")
             return URL(string: urlString)
         }
+    }
+    
+    static func loadRemoteImage(url: URL, success _success: @escaping(UIImage?) -> Void,
+    failure _failure: @escaping(NetworkErrors) -> Void) {
+        
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url) {
+                    DispatchQueue.main.async {
+                        _success(UIImage(data: data))
+                    }//: DISPATCHQUEUE MAIN
+                } else {
+                    DispatchQueue.main.async {
+                        _failure(.notFound)
+                    }//: DISPATCHQUEUE MAIN
+                    
+                }
+            }//: DISPATCHQUEUE GLOBAL
+            
+        
     }
     
     

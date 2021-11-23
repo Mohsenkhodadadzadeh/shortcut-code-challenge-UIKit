@@ -38,6 +38,7 @@
 		82EFCD65274D3B6D009EA973 /* SearchSBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD64274D3B6D009EA973 /* SearchSBHandler.swift */; };
 		82EFCD67274D3B88009EA973 /* NotificationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD66274D3B88009EA973 /* NotificationPermission.swift */; };
 		82EFCD6A274D4360009EA973 /* publicNamesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD69274D4360009EA973 /* publicNamesEnum.swift */; };
+		82EFCD6D274D442F009EA973 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD6C274D442F009EA973 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		82EFCD64274D3B6D009EA973 /* SearchSBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSBHandler.swift; sourceTree = "<group>"; };
 		82EFCD66274D3B88009EA973 /* NotificationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermission.swift; sourceTree = "<group>"; };
 		82EFCD69274D4360009EA973 /* publicNamesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicNamesEnum.swift; sourceTree = "<group>"; };
+		82EFCD6C274D442F009EA973 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 		82EFCD58274D38F0009EA973 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				82EFCD6B274D441D009EA973 /* Detail Controller */,
 				82EFCD59274D3A69009EA973 /* Browse */,
 			);
 			path = ViewController;
@@ -247,6 +250,14 @@
 				82EFCD69274D4360009EA973 /* publicNamesEnum.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		82EFCD6B274D441D009EA973 /* Detail Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82EFCD6C274D442F009EA973 /* DetailVC.swift */,
+			);
+			path = "Detail Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +411,7 @@
 				826F5E69274D14F600C85EE0 /* ComicEntity+CoreDataClass.swift in Sources */,
 				82EFCD5B274D3A85009EA973 /* BrowseVC.swift in Sources */,
 				82EFCD65274D3B6D009EA973 /* SearchSBHandler.swift in Sources */,
+				82EFCD6D274D442F009EA973 /* DetailVC.swift in Sources */,
 				826F5E23274CD74100C85EE0 /* shortcut_code_challenge_UIKit.xcdatamodeld in Sources */,
 				82EFCD6A274D4360009EA973 /* publicNamesEnum.swift in Sources */,
 				82EFCD61274D3B34009EA973 /* WaitingTVC.swift in Sources */,
