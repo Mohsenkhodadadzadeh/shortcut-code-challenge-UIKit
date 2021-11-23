@@ -41,6 +41,10 @@
 		82EFCD6D274D442F009EA973 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD6C274D442F009EA973 /* DetailVC.swift */; };
 		82EFCD70274D527A009EA973 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD6F274D527A009EA973 /* FavoriteVC.swift */; };
 		82EFCD72274D5297009EA973 /* FavoriteTVHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD71274D5297009EA973 /* FavoriteTVHandler.swift */; };
+		82EFCD75274D5B50009EA973 /* NetworkChainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD74274D5B50009EA973 /* NetworkChainProtocol.swift */; };
+		82EFCD77274D5B7E009EA973 /* Response200.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD76274D5B7E009EA973 /* Response200.swift */; };
+		82EFCD79274D5BA3009EA973 /* NotResponse404.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD78274D5BA3009EA973 /* NotResponse404.swift */; };
+		82EFCD7B274D5BBC009EA973 /* ServerError500.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EFCD7A274D5BBC009EA973 /* ServerError500.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +103,10 @@
 		82EFCD6C274D442F009EA973 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		82EFCD6F274D527A009EA973 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
 		82EFCD71274D5297009EA973 /* FavoriteTVHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTVHandler.swift; sourceTree = "<group>"; };
+		82EFCD74274D5B50009EA973 /* NetworkChainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChainProtocol.swift; sourceTree = "<group>"; };
+		82EFCD76274D5B7E009EA973 /* Response200.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response200.swift; sourceTree = "<group>"; };
+		82EFCD78274D5BA3009EA973 /* NotResponse404.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotResponse404.swift; sourceTree = "<group>"; };
+		82EFCD7A274D5BBC009EA973 /* ServerError500.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError500.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +215,7 @@
 		826F5E55274D067400C85EE0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				82EFCD73274D5B30009EA973 /* Chain network */,
 				826F5E56274D068B00C85EE0 /* Network.swift */,
 				826F5E58274D06C200C85EE0 /* ServerEnvironments.plist */,
 				826F5E5A274D073100C85EE0 /* Services.swift */,
@@ -272,6 +281,17 @@
 				82EFCD71274D5297009EA973 /* FavoriteTVHandler.swift */,
 			);
 			path = "Favorite Controller";
+			sourceTree = "<group>";
+		};
+		82EFCD73274D5B30009EA973 /* Chain network */ = {
+			isa = PBXGroup;
+			children = (
+				82EFCD74274D5B50009EA973 /* NetworkChainProtocol.swift */,
+				82EFCD76274D5B7E009EA973 /* Response200.swift */,
+				82EFCD78274D5BA3009EA973 /* NotResponse404.swift */,
+				82EFCD7A274D5BBC009EA973 /* ServerError500.swift */,
+			);
+			path = "Chain network";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +433,7 @@
 				82EFCD70274D527A009EA973 /* FavoriteVC.swift in Sources */,
 				826F5E57274D068B00C85EE0 /* Network.swift in Sources */,
 				82EFCD63274D3B53009EA973 /* SearchSRUHandler.swift in Sources */,
+				82EFCD79274D5BA3009EA973 /* NotResponse404.swift in Sources */,
 				826F5E19274CD74100C85EE0 /* AppDelegate.swift in Sources */,
 				826F5E6C274D1C0C00C85EE0 /* DataStorage.swift in Sources */,
 				82EFCD67274D3B88009EA973 /* NotificationPermission.swift in Sources */,
@@ -420,6 +441,7 @@
 				826F5E1B274CD74100C85EE0 /* SceneDelegate.swift in Sources */,
 				82EFCD72274D5297009EA973 /* FavoriteTVHandler.swift in Sources */,
 				826F5E4D274CE90B00C85EE0 /* ComicModel.swift in Sources */,
+				82EFCD75274D5B50009EA973 /* NetworkChainProtocol.swift in Sources */,
 				82EFCD5D274D3AF3009EA973 /* BrowseTVC.swift in Sources */,
 				826F5E5F274D0A7600C85EE0 /* Int.swift in Sources */,
 				826F5E5D274D09D500C85EE0 /* NetworkErrors.swift in Sources */,
@@ -427,6 +449,8 @@
 				826F5E69274D14F600C85EE0 /* ComicEntity+CoreDataClass.swift in Sources */,
 				82EFCD5B274D3A85009EA973 /* BrowseVC.swift in Sources */,
 				82EFCD65274D3B6D009EA973 /* SearchSBHandler.swift in Sources */,
+				82EFCD77274D5B7E009EA973 /* Response200.swift in Sources */,
+				82EFCD7B274D5BBC009EA973 /* ServerError500.swift in Sources */,
 				82EFCD6D274D442F009EA973 /* DetailVC.swift in Sources */,
 				826F5E23274CD74100C85EE0 /* shortcut_code_challenge_UIKit.xcdatamodeld in Sources */,
 				82EFCD6A274D4360009EA973 /* publicNamesEnum.swift in Sources */,
