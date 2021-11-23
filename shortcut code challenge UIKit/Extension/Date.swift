@@ -16,7 +16,7 @@ extension Date {
         return retObj
     }
     
-    mutating func convertToLongDate() -> String {
+    func convertToLongDate() -> String {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM dd,yyyy"
