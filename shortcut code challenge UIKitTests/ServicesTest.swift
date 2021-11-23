@@ -46,6 +46,95 @@ class ServicesTest: XCTestCase {
     }
     
     
+    func testResponse200() throws {
+        
+        
+        let localObject = ComicModel(num: 2545, description: "P((B|A)|(A|B)) represents the probability that you'll mix up the order of the terms when using Bayesian notation." , publishedDate:  Date.convertToDate("2021", "11", "22") ?? Date(), link: "", image: nil, news: "", safeTitle: "Bayes' Theorem", title: "Bayes' Theorem", transcript: "")
+        
+        let localData = """
+{"month": "11", "num": 2545, "link": "", "year": "2021", "news": "", "safe_title": "Bayes' Theorem", "transcript": "", "alt": "P((B|A)|(A|B)) represents the probability that you'll mix up the order of the terms when using Bayesian notation.", "img": "", "title": "Bayes' Theorem", "day": "22"}
+"""
+            .data(using: .ascii)
+        
+        
+        
+        var state200: NetworkChainProtocol = Response200()
+        var state404: NetworkChainProtocol = NotResponse404()
+        let state500: NetworkChainProtocol = ServerError500()
+        
+        
+        state200.next = state404
+        state404.next = state500
+        
+        let proccesdData: ComicModel = try! state200.calculate(localData!, status: 200)
+          //  XCTAssertTrue(proccesdData != nil)
+            XCTAssertEqual(localObject, proccesdData)
+        
+    }
+    
+    func testChainNotResponse404() throws {
+        
+        let dummyData = "dummy".data(using: .ascii)
+        var state200: NetworkChainProtocol = Response200()
+        var state404: NetworkChainProtocol = NotResponse404()
+        let state500: NetworkChainProtocol = ServerError500()
+        
+        
+        state200.next = state404
+        state404.next = state500
+        
+        do {
+        let _: ComicModel = try state200.calculate(dummyData!, status: 404)
+            
+        } catch let ex as NetworkErrors{
+            XCTAssertEqual(ex.errorDescription, NetworkErrors.notFound.errorDescription)
+        }
+          //  XCTAssertTrue(proccesdData != nil)
+        
+    }
+    
+    func testServerError500() throws {
+        
+        let dummyData = "dummy".data(using: .ascii)
+        var state200: NetworkChainProtocol = Response200()
+        var state404: NetworkChainProtocol = NotResponse404()
+        let state500: NetworkChainProtocol = ServerError500()
+        
+        
+        state200.next = state404
+        state404.next = state500
+        
+        do {
+        let _: ComicModel = try state200.calculate(dummyData!, status: 500)
+            
+        } catch let ex as NetworkErrors{
+            XCTAssertEqual(ex.errorDescription, NetworkErrors.internalServerError.errorDescription)
+        }
+          //  XCTAssertTrue(proccesdData != nil)
+       
+    }
+    
+    func testEndOfChainWithUndefindedStatusCode() throws {
+        
+        let dummyData = "dummy".data(using: .ascii)
+        var state200: NetworkChainProtocol = Response200()
+        var state404: NetworkChainProtocol = NotResponse404()
+        let state500: NetworkChainProtocol = ServerError500()
+        
+        
+        state200.next = state404
+        state404.next = state500
+        
+        do {
+        let _: ComicModel = try state200.calculate(dummyData!, status: 9545)
+            
+        } catch let ex as NetworkErrors{
+            XCTAssertEqual(ex.errorDescription, NetworkErrors.endOfChain.errorDescription)
+        }
+          //  XCTAssertTrue(proccesdData != nil)
+      
+    }
+    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
