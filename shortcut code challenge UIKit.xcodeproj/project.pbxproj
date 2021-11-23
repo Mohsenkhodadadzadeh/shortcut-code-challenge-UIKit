@@ -17,6 +17,10 @@
 		826F5E33274CD74300C85EE0 /* shortcut_code_challenge_UIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E32274CD74300C85EE0 /* shortcut_code_challenge_UIKitTests.swift */; };
 		826F5E3D274CD74300C85EE0 /* shortcut_code_challenge_UIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E3C274CD74300C85EE0 /* shortcut_code_challenge_UIKitUITests.swift */; };
 		826F5E3F274CD74300C85EE0 /* shortcut_code_challenge_UIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E3E274CD74300C85EE0 /* shortcut_code_challenge_UIKitUITestsLaunchTests.swift */; };
+		826F5E4D274CE90B00C85EE0 /* ComicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E4C274CE90B00C85EE0 /* ComicModel.swift */; };
+		826F5E50274CE97100C85EE0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E4F274CE97100C85EE0 /* Date.swift */; };
+		826F5E52274CEAD700C85EE0 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E51274CEAD700C85EE0 /* Collection.swift */; };
+		826F5E54274CEBD700C85EE0 /* ExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E53274CEBD700C85EE0 /* ExtensionTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		826F5E38274CD74300C85EE0 /* shortcut code challenge UIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shortcut code challenge UIKitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		826F5E3C274CD74300C85EE0 /* shortcut_code_challenge_UIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shortcut_code_challenge_UIKitUITests.swift; sourceTree = "<group>"; };
 		826F5E3E274CD74300C85EE0 /* shortcut_code_challenge_UIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shortcut_code_challenge_UIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		826F5E4C274CE90B00C85EE0 /* ComicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicModel.swift; sourceTree = "<group>"; };
+		826F5E4F274CE97100C85EE0 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		826F5E51274CEAD700C85EE0 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		826F5E53274CEBD700C85EE0 /* ExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,8 @@
 		826F5E17274CD74100C85EE0 /* shortcut code challenge UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				826F5E4E274CE95100C85EE0 /* Extension */,
+				826F5E4B274CE8D600C85EE0 /* Model */,
 				826F5E18274CD74100C85EE0 /* AppDelegate.swift */,
 				826F5E1A274CD74100C85EE0 /* SceneDelegate.swift */,
 				826F5E1C274CD74100C85EE0 /* ViewController.swift */,
@@ -117,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				826F5E32274CD74300C85EE0 /* shortcut_code_challenge_UIKitTests.swift */,
+				826F5E53274CEBD700C85EE0 /* ExtensionTest.swift */,
 			);
 			path = "shortcut code challenge UIKitTests";
 			sourceTree = "<group>";
@@ -128,6 +139,23 @@
 				826F5E3E274CD74300C85EE0 /* shortcut_code_challenge_UIKitUITestsLaunchTests.swift */,
 			);
 			path = "shortcut code challenge UIKitUITests";
+			sourceTree = "<group>";
+		};
+		826F5E4B274CE8D600C85EE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				826F5E4C274CE90B00C85EE0 /* ComicModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		826F5E4E274CE95100C85EE0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				826F5E4F274CE97100C85EE0 /* Date.swift */,
+				826F5E51274CEAD700C85EE0 /* Collection.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +290,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				826F5E1D274CD74100C85EE0 /* ViewController.swift in Sources */,
+				826F5E50274CE97100C85EE0 /* Date.swift in Sources */,
 				826F5E19274CD74100C85EE0 /* AppDelegate.swift in Sources */,
 				826F5E1B274CD74100C85EE0 /* SceneDelegate.swift in Sources */,
+				826F5E4D274CE90B00C85EE0 /* ComicModel.swift in Sources */,
+				826F5E52274CEAD700C85EE0 /* Collection.swift in Sources */,
 				826F5E23274CD74100C85EE0 /* shortcut_code_challenge_UIKit.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				826F5E33274CD74300C85EE0 /* shortcut_code_challenge_UIKitTests.swift in Sources */,
+				826F5E54274CEBD700C85EE0 /* ExtensionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
