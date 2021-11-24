@@ -180,10 +180,14 @@ This class uses to show comic cells
  
  #### DetailVC
  
- This class is the only class for detail view, 
+ This class is the main class for detail view, 
  
  * Comic can save to favorite after loading image. `bookMarkButtonPress(_:)`
  * Comic photo be able to share after the image is loaded completely. `shareButtonPress(_:)`
+
+#### SetupDetailVCUI:
+
+this is an extension of DetailVC for prepare View programmatically. I just Used it because dynamic UIKit is mentioned on the job advertisement detail.
 
 
 ----
