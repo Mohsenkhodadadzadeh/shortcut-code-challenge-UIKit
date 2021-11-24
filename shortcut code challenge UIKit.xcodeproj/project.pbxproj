@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82112E68274E4200009A8138 /* SetupDetailVCUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82112E67274E4200009A8138 /* SetupDetailVCUI.swift */; };
+		82112E6B274E6912009A8138 /* Custom Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82112E6A274E6912009A8138 /* Custom Button.swift */; };
 		826F5E19274CD74100C85EE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E18274CD74100C85EE0 /* AppDelegate.swift */; };
 		826F5E1B274CD74100C85EE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E1A274CD74100C85EE0 /* SceneDelegate.swift */; };
 		826F5E20274CD74100C85EE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826F5E1E274CD74100C85EE0 /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82112E67274E4200009A8138 /* SetupDetailVCUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupDetailVCUI.swift; sourceTree = "<group>"; };
+		82112E6A274E6912009A8138 /* Custom Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Button.swift"; sourceTree = "<group>"; };
 		826F5E15274CD74100C85EE0 /* shortcut code challenge UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shortcut code challenge UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		826F5E18274CD74100C85EE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		826F5E1A274CD74100C85EE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +136,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82112E69274E68F1009A8138 /* IBDesignable */ = {
+			isa = PBXGroup;
+			children = (
+				82112E6A274E6912009A8138 /* Custom Button.swift */,
+			);
+			path = IBDesignable;
+			sourceTree = "<group>";
+		};
 		826F5E0C274CD74100C85EE0 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +167,7 @@
 		826F5E17274CD74100C85EE0 /* shortcut code challenge UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				82112E69274E68F1009A8138 /* IBDesignable */,
 				82EFCD68274D4354009EA973 /* Enum */,
 				82EFCD58274D38F0009EA973 /* ViewController */,
 				826F5E55274D067400C85EE0 /* Services */,
@@ -267,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				82EFCD6C274D442F009EA973 /* DetailVC.swift */,
+				82112E67274E4200009A8138 /* SetupDetailVCUI.swift */,
 			);
 			path = "Detail Controller";
 			sourceTree = "<group>";
@@ -426,6 +440,7 @@
 				82EFCD5F274D3B16009EA973 /* BrowseTVHandler.swift in Sources */,
 				826F5E6A274D14F600C85EE0 /* ComicEntity+CoreDataProperties.swift in Sources */,
 				826F5E50274CE97100C85EE0 /* Date.swift in Sources */,
+				82112E6B274E6912009A8138 /* Custom Button.swift in Sources */,
 				82EFCD70274D527A009EA973 /* FavoriteVC.swift in Sources */,
 				826F5E57274D068B00C85EE0 /* Network.swift in Sources */,
 				82EFCD63274D3B53009EA973 /* SearchSRUHandler.swift in Sources */,
@@ -436,6 +451,7 @@
 				826F5E5B274D073100C85EE0 /* Services.swift in Sources */,
 				826F5E1B274CD74100C85EE0 /* SceneDelegate.swift in Sources */,
 				82EFCD72274D5297009EA973 /* FavoriteTVHandler.swift in Sources */,
+				82112E68274E4200009A8138 /* SetupDetailVCUI.swift in Sources */,
 				826F5E4D274CE90B00C85EE0 /* ComicModel.swift in Sources */,
 				82EFCD75274D5B50009EA973 /* NetworkChainProtocol.swift in Sources */,
 				82EFCD5D274D3AF3009EA973 /* BrowseTVC.swift in Sources */,

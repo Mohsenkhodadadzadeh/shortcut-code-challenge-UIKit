@@ -10,14 +10,15 @@ import CoreData
 
 class DetailVC: UIViewController {
     
-    @IBOutlet weak var comicImageView: UIImageView!
-    
-    @IBOutlet weak var dateLabel: UILabel!
-    
-    @IBOutlet weak var comicDetailLabel: UILabel!
-    @IBOutlet weak var comicTitleLabel: UILabel!
-    @IBOutlet weak var bookmarkImage: UIImageView!
-    
+    var comicImageView: UIImageView!
+    var dateLabel: UILabel!
+    var comicDetailLabel: UILabel!
+    var comicTitleLabel: UILabel!
+    var bookmarkImageView: UIImageView!
+    var bookmarkButton: UIButton!
+    var shareButton: CustomButton!
+    var mainScrollView: UIScrollView!
+    var mainViewInScrollView: UIView!
     
     var comicData: ComicModel!
     let dataStorage: DataStorage = DataStorage()
@@ -25,9 +26,9 @@ class DetailVC: UIViewController {
     fileprivate var isFavorite: Bool = false {
         didSet {
             if isFavorite {
-                bookmarkImage.image = UIImage(systemName: "bookmark.fill")
+                bookmarkImageView.image = UIImage(systemName: "bookmark.fill")
             } else {
-                bookmarkImage.image = UIImage(systemName: "bookmark")
+                bookmarkImageView.image = UIImage(systemName: "bookmark")
             }
         }
     }
@@ -35,9 +36,9 @@ class DetailVC: UIViewController {
     fileprivate var isImageLoaded: Bool = false {
         didSet {
             if isImageLoaded {
-                bookmarkImage.isHidden = false
+                bookmarkImageView.isHidden = false
             } else {
-                bookmarkImage.isHidden = false
+                bookmarkImageView.isHidden = false
             }
         }
     }
@@ -54,18 +55,19 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpView()
         setupPage()
         
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func bookMarkButtonPress(_ sender: Any) {
+    @objc func bookMarkButtonPress(_ sender: Any) {
         if isImageLoaded {
             bookmark(newStatus: !isFavorite)
         }
     }
     
-    @IBAction func shareButtonPress(_ sender: Any) {
+    @objc func shareButtonPress(_ sender: Any) {
         
         if let image = comicImage {
             let item = [image]
@@ -99,11 +101,7 @@ class DetailVC: UIViewController {
         
         comicDetailLabel.text = comicData.description
         
-        let imageTapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
-        comicImageView.addGestureRecognizer(imageTapGesture)
-        
     }
-    
     
     @objc func imageTapped(_ sender: UITapGestureRecognizer) {
         let imageView = sender.view as! UIImageView
@@ -135,22 +133,15 @@ class DetailVC: UIViewController {
             } failure: { err in
                 print(err.errorDescription)
             }
-
-            
         }
-         
     }
     
     fileprivate func bookmark(newStatus: Bool) {
         
-        
         if newStatus {
-            
             dataStorage.saveComic(comicData, image: comicImage)
             isFavorite = true
-            
         } else {
-            
             dataStorage.removeComic(for: comicData.num)
             isFavorite = false
         }
