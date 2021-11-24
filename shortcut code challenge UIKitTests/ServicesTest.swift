@@ -39,7 +39,7 @@ class ServicesTest: XCTestCase {
         var dataStorage = DataStorage()
         dataStorage.saveComic(localData, image: nil)
         
-        let recordedData = dataStorage.retriveComics().filter({$0.num == 11}).first
+        let recordedData = dataStorage.retrieveComics().filter({$0.num == 11}).first
         
         XCTAssertEqual(localData, recordedData!)
         

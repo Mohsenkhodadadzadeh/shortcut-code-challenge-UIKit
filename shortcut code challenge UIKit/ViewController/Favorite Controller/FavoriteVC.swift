@@ -46,7 +46,7 @@ class FavoriteVC: UIViewController {
     fileprivate func loadData() {
         
         let dataStorage = DataStorage()
-        data = dataStorage.retriveComics()
+        data = dataStorage.retrieveComics()
         tableView.reloadData()
         
     }

@@ -50,7 +50,7 @@ public final class DataStorage {
         try? managedContext.save()
     }
     
-    func retriveComics() -> [ComicModel] {
+    func retrieveComics() -> [ComicModel] {
         
         let fetch = prepareFetchRequestForComicEntity(query: "num > -1")
         var retObj: [ComicModel] = []
@@ -69,7 +69,7 @@ public final class DataStorage {
         
     }
     
-    func retriveComicImage(for id: Int) -> UIImage? {
+    func retrieveComicImage(for id: Int) -> UIImage? {
         
         let fetch = prepareFetchRequestForComicEntity(query: "num == \(id)")
         if let object = (try? managedContext.fetch(fetch))?.first {
