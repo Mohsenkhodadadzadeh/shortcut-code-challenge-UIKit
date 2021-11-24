@@ -4,11 +4,11 @@
 
 ### You may see some commits were failed because of following reasons:
 
-- Failing reason for the second commit until the 14th: It was because of the iOS deployment version that is not compatible with Github CI ( you can check and see the Bitrise tests were succeeded).
+- Failure reason for the second commit until the 14th: It was because of the iOS deployment version that is not compatible with Github CI ( you can check and see the Bitrise tests were succeeded).
 
-- The commit `4aa2ec5bba9ebc800a48f9feb82a89b200487e79` - `add backgroundFetch and Notification` failed because of something on Bitrise ( It has succeeded on GitHub CI), but it could pass the test when I merged the code to master.
+- The commit `4aa2ec5bba9ebc800a48f9feb82a89b200487e79` - `add backgroundFetch and Notification` failed because of something on Bitrise ( It has been succeeded on GitHub CI), and it could pass all tests when I merged the branch to master.
 
-- From commit (add detailVC) until the next four commits failed because of the `testDetailViewLoadImageAndFullScreen()` UITest, it is a test that depends on external data( from server), even though I know this test is a wrong test and I must not write tests like it, I have written it to show I am able to write UITests for child pages. ( I disabled this test from four commit after `7848fc3f6847c5ff31082ff0780fab64be1b497f`) 
+- From commit (add detailVC) until the next four commits failed because of the `testDetailViewLoadImageAndFullScreen()` UITest, it is a test that depends on external data( from server), even though I know this test is a wrong test and I must not write tests which depend on external things, I have written it to show I am able to write UITests for child pages. ( I disabled this test from four commit after `7848fc3f6847c5ff31082ff0780fab64be1b497f`) 
 
 
 ### Why I chose DispatchQueue as  threading way:
