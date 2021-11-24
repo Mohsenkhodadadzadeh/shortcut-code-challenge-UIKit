@@ -157,7 +157,7 @@ class DetailVC: UIViewController {
     }
     
     private func loadFavorite() {
-        if let image = dataStorage.retriveComicImage(for: comicData.num) {
+        if let image = dataStorage.retrieveComicImage(for: comicData.num) {
             comicImage = image
             isFavorite = true
         }

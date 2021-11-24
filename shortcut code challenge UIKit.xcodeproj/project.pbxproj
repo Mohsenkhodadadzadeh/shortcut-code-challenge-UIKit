@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		826F5E19274CD74100C85EE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E18274CD74100C85EE0 /* AppDelegate.swift */; };
 		826F5E1B274CD74100C85EE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E1A274CD74100C85EE0 /* SceneDelegate.swift */; };
-		826F5E1D274CD74100C85EE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E1C274CD74100C85EE0 /* ViewController.swift */; };
 		826F5E20274CD74100C85EE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826F5E1E274CD74100C85EE0 /* Main.storyboard */; };
 		826F5E23274CD74100C85EE0 /* shortcut_code_challenge_UIKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 826F5E21274CD74100C85EE0 /* shortcut_code_challenge_UIKit.xcdatamodeld */; };
 		826F5E25274CD74300C85EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 826F5E24274CD74300C85EE0 /* Assets.xcassets */; };
@@ -68,7 +67,6 @@
 		826F5E15274CD74100C85EE0 /* shortcut code challenge UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shortcut code challenge UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		826F5E18274CD74100C85EE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		826F5E1A274CD74100C85EE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		826F5E1C274CD74100C85EE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		826F5E1F274CD74100C85EE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		826F5E22274CD74100C85EE0 /* shortcut_code_challenge_UIKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = shortcut_code_challenge_UIKit.xcdatamodel; sourceTree = "<group>"; };
 		826F5E24274CD74300C85EE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 				826F5E4B274CE8D600C85EE0 /* Model */,
 				826F5E18274CD74100C85EE0 /* AppDelegate.swift */,
 				826F5E1A274CD74100C85EE0 /* SceneDelegate.swift */,
-				826F5E1C274CD74100C85EE0 /* ViewController.swift */,
 				826F5E1E274CD74100C85EE0 /* Main.storyboard */,
 				826F5E24274CD74300C85EE0 /* Assets.xcassets */,
 				826F5E26274CD74300C85EE0 /* LaunchScreen.storyboard */,
@@ -428,7 +425,6 @@
 			files = (
 				82EFCD5F274D3B16009EA973 /* BrowseTVHandler.swift in Sources */,
 				826F5E6A274D14F600C85EE0 /* ComicEntity+CoreDataProperties.swift in Sources */,
-				826F5E1D274CD74100C85EE0 /* ViewController.swift in Sources */,
 				826F5E50274CE97100C85EE0 /* Date.swift in Sources */,
 				82EFCD70274D527A009EA973 /* FavoriteVC.swift in Sources */,
 				826F5E57274D068B00C85EE0 /* Network.swift in Sources */,

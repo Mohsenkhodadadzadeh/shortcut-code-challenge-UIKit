@@ -30,7 +30,7 @@ class ExtensionTest: XCTestCase {
         
     }
     
-    func testCheckDateWithNil() throws {
+    func testCheckDateWithOnlyYear() throws {
         let dateFormatter = ISO8601DateFormatter()
         let localObj = dateFormatter.date(from: "1990-01-01T00:00:00+0000")
         
@@ -39,7 +39,7 @@ class ExtensionTest: XCTestCase {
         XCTAssertEqual(localObj, convertedDate)
     }
     
-    func testisNilArray() throws {
+    func testIsNilArray() throws {
         
         let obj = [1,2]
         
